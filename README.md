@@ -1,4 +1,4 @@
-# Inteligencia Mil Grau WhatsApp e ChatGPT
+# Integração WhatsApp e ChatGPT
 
 Segue o código para testar a integração do ChatGPT com WhatsApp
 
