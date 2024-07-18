@@ -2,6 +2,11 @@
 
 let chatgpt = true;
 
+// set envs
+require('dotenv').config({
+  path: './.env'
+})
+
 // Access token for your app
 // (copy token from DevX getting started pagee
 // and save it as environment variable into the .env file)
