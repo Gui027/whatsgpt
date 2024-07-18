@@ -38,7 +38,7 @@ app.post("/webhook", async function (req, res) {
   let body = req.body;
 
   // Check the Incoming webhook message
-  //console.log(JSON.stringify(req.body, null, 2));
+  console.log(JSON.stringify(req.body, null, 2));
 
   // info on WhatsApp text message payload: https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks/payload-examples#text-messages
   if (req.body.object) {
@@ -76,6 +76,10 @@ app.get("/webhook", (req, res) => {
   let mode = req.query["hub.mode"];
   let token = req.query["hub.verify_token"];
   let challenge = req.query["hub.challenge"];
+
+  console.debug("WEBHOOK:", process.env);
+  console.debug("WEBHOOK:", mode, token, challenge);
+  console.debug("WEBHOOK:", mode, " === subscribe && ", token, "=== ", verify_token);
 
   // Check if a token and mode were sent
   if (mode && token) {
